@@ -3,12 +3,9 @@ import AppReducer, { AppState } from "./AppReducer";
 
 // initial state
 const initialState: AppState = {
-  watchlist: localStorage.getItem("watchlist")
-    ? JSON.parse(localStorage.getItem("watchlist") as string)
-    : [],
-  watched: localStorage.getItem("watched")
-    ? JSON.parse(localStorage.getItem("watched") as string)
-    : [],
+  watchlist: [],
+  watched: [],
+  initialized: false,
   addMovieToWatchList: () => {
     alert("unknown addMovieToWatchList");
   },
@@ -34,9 +31,47 @@ export const GlobalProvider: React.FC = (props) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
   useEffect(() => {
-    localStorage.setItem("watchlist", JSON.stringify(state.watchlist));
-    localStorage.setItem("watched", JSON.stringify(state.watched));
+    if (!state.initialized) {
+      return;
+    }
+
+    fetch("https://content.dropboxapi.com/2/files/upload", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.REACT_APP_DROPBOX_KEY}`,
+        "Content-Type": "application/octet-stream",
+        "Dropbox-API-Arg": JSON.stringify({
+          path: process.env.REACT_APP_DROPBOX_PATH,
+          mode: { ".tag": "overwrite" },
+        }),
+      },
+      body: JSON.stringify(state),
+    }).catch((err) => {
+      alert(err);
+    });
   }, [state]);
+
+  useEffect(() => {
+    fetch("https://content.dropboxapi.com/2/files/download", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.REACT_APP_DROPBOX_KEY}`,
+        "Dropbox-API-Arg": JSON.stringify({
+          path: process.env.REACT_APP_DROPBOX_PATH,
+        }),
+      },
+    })
+      .then(async (res: Response) => {
+        const result = await res.json();
+        dispatch({
+          type: "INITIALIZE",
+          payload: result,
+        });
+      })
+      .catch((err) => {
+        alert(err);
+      });
+  }, []);
 
   // actions
   const addMovieToWatchList = (movie: any) => {
@@ -64,6 +99,7 @@ export const GlobalProvider: React.FC = (props) => {
       value={{
         watchlist: state.watchlist,
         watched: state.watched,
+        initialized: state.initialized,
         addMovieToWatchList,
         removeMoveFromWatchList,
         addMovieToWatched,

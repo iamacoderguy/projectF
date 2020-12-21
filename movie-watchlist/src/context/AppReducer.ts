@@ -1,6 +1,7 @@
 export type AppState = {
   watchlist: any[],
   watched: any[],
+  initialized: boolean,
   addMovieToWatchList: (movie: any) => void,
   removeMoveFromWatchList: (id: string) => void,
   addMovieToWatched: (movie: any) => void,
@@ -9,6 +10,13 @@ export type AppState = {
 }
 const AppReducer = (state: AppState, { type, payload } : {type: string, payload: any}) => {
   switch (type) {
+    case "INITIALIZE":
+      return {
+        ...state,
+        ...payload,
+        initialized: true,
+      }
+
     case "ADD_MOVIE_TO_WATCHLIST":
       return {
         ...state,
