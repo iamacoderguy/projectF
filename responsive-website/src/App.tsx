@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "./components/Header";
+import Home from "./screens/Home";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <Header />
       <Switch>
         <Route path="/" exact>
-          <div>Home</div>
+          <Home />
         </Route>
 
         <Route path="/features" exact>
