@@ -189,3 +189,8 @@ header a:hover {
 .languages .card:hover {
   transform: translateY(-15px);
 }
+
+/* Footer */
+.footer .social {
+  margin: 0 10px;
+}
