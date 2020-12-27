@@ -190,7 +190,7 @@ header a:hover {
 }
 
 /* Footer */
-.footer .social {
+.footer .social a {
   margin: 0 10px;
 }
 
