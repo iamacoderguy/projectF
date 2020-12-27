@@ -6,6 +6,7 @@ import {
   faProjectDiagram,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import images from "../images";
 
 interface Props {}
 
@@ -49,6 +50,7 @@ function Home({}: Props): ReactElement {
           </div>
         </div>
       </section>
+
       <section className="stats">
         <div className="container">
           <h3 className="stats-heading text-center my-1">
@@ -73,6 +75,18 @@ function Home({}: Props): ReactElement {
               <h3>2,343,265</h3>
               <p className="text-secondary">Sed lobortis</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="cli">
+        <div className="container grid">
+          <img src={images.cli} alt="" />
+          <div className="card">
+            <h3>Suspendisse hendrerit congue.</h3>
+          </div>
+          <div className="card">
+            <h3>Aliquam eu, gravida erat.</h3>
           </div>
         </div>
       </section>

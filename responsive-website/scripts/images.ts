@@ -27,7 +27,7 @@ const generate = () => {
         .replace(/ /g, '_');
       const path = file
         .replace(/\\/g, '/');
-      return `${name}: require('./${path}')`;
+      return `${name}: require('./${path}').default`;
     })
     .join(',\n  ');
 
