@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 
 :root {
-  --primary: #333;
-  --secondary: #047aed;
+  --primary: #047aed;
+  --secondary: #1e3fa8;
+  --dark: #002240;
+  --light: #f4f4f4;
+  --gray: #333;
   --white: #fff;
 }
 
@@ -14,7 +17,7 @@
 
 body {
   font-family: "Lato", sans-serif;
-  color: var(--primary);
+  color: var(--gray);
   line-height: 1.6;
 }
 
@@ -24,7 +27,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--primary);
+  color: var(--gray);
 }
 
 h1,
@@ -45,7 +48,7 @@ img {
 /* NavBar */
 
 header {
-  background-color: var(--secondary);
+  background-color: var(--primary);
   color: var(--white);
   height: 70px;
 }
@@ -71,7 +74,7 @@ header a:hover {
 /* Showcase */
 .showcase {
   height: 400px;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   color: var(--white);
   position: relative;
 }
@@ -160,4 +163,9 @@ header a:hover {
 .cli .grid > *:first-child {
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
+}
+
+/* Cloud */
+.cloud .grid {
+  grid-template-columns: 4fr 3fr;
 }

@@ -7,7 +7,7 @@
 
 .card {
   background-color: var(--white);
-  color: var(--primary);
+  color: var(--gray);
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
@@ -18,7 +18,7 @@
   display: inline-block;
   padding: 10px 30px;
   cursor: pointer;
-  background: var(--secondary);
+  background: var(--primary);
   color: var(--white);
   border: none;
   border-radius: 5px;
@@ -31,6 +31,53 @@
 
 .btn:hover {
   transform: scale(0.98);
+}
+
+/* Background & colored buttons */
+.bg-primary,
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.bg-secondary,
+.btn-secondary {
+  background-color: var(--secondary);
+  color: var(--white);
+}
+
+.bg-dark,
+.btn-dark {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+.bg-light,
+.btn-light {
+  background-color: var(--light);
+  color: var(--gray);
+}
+
+/* Text sizes */
+
+.lead {
+  font-size: 20px;
+}
+
+.sm {
+  font-size: 1rem;
+}
+
+.md {
+  font-size: 2rem;
+}
+
+.lg {
+  font-size: 3rem;
+}
+
+.xl {
+  font-size: 4rem;
 }
 
 .text-center {

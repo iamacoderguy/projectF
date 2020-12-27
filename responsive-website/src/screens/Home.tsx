@@ -90,6 +90,22 @@ function Home({}: Props): ReactElement {
           </div>
         </div>
       </section>
+
+      <section className="cloud bg-primary my-2 py-2">
+        <div className="container grid">
+          <div className="text-center">
+            <h2 className="lg">Aliquam Euismod Volutpat</h2>
+            <p className="lead my-1">
+              Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+              consectetur, adipisci velit...
+            </p>
+            <Link to="/features" className="btn btn-dark">
+              Read More
+            </Link>
+          </div>
+          <img src={images.cloud} alt="" />
+        </div>
+      </section>
     </>
   );
 }
