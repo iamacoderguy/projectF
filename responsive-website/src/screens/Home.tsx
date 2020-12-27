@@ -106,6 +106,44 @@ function Home({}: Props): ReactElement {
           <img src={images.cloud} alt="" />
         </div>
       </section>
+
+      <section className="languages">
+        <h2 className="md text-center my-2">Cras Accumsan</h2>
+        <div className="container flex">
+          <div className="card">
+            <h4>Proin</h4>
+            <img src={images.logos_clojure} alt="" />
+          </div>
+          <div className="card">
+            <h4>Pellentes</h4>
+            <img src={images.logos_csharp} alt="" />
+          </div>
+          <div className="card">
+            <h4>Habitant</h4>
+            <img src={images.logos_go} alt="" />
+          </div>
+          <div className="card">
+            <h4>Morbi</h4>
+            <img src={images.logos_node} alt="" />
+          </div>
+          <div className="card">
+            <h4>Tristique</h4>
+            <img src={images.logos_php} alt="" />
+          </div>
+          <div className="card">
+            <h4>Senectus</h4>
+            <img src={images.logos_python} alt="" />
+          </div>
+          <div className="card">
+            <h4>Et</h4>
+            <img src={images.logos_ruby} alt="" />
+          </div>
+          <div className="card">
+            <h4>Netus</h4>
+            <img src={images.logos_scala} alt="" />
+          </div>
+        </div>
+      </section>
     </>
   );
 }
