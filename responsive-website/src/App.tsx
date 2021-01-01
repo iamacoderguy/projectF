@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Home from "./screens/Home";
 import Footer from "./components/Footer";
 import Features from "./screens/Features";
+import Docs from "./screens/Docs";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         </Route>
 
         <Route path="/docs" exact>
-          <div>Docs</div>
+          <Docs />
         </Route>
       </Switch>
       <Footer />
