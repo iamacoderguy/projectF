@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./screens/Home";
 import Footer from "./components/Footer";
+import Features from "./screens/Features";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         </Route>
 
         <Route path="/features" exact>
-          <div>Features</div>
+          <Features />
         </Route>
 
         <Route path="/docs" exact>
