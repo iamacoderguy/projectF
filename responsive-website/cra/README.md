@@ -1,3 +1,7 @@
+Source: https://www.youtube.com/watch?v=p0bGHP-PXD4
+
+Live: N/A
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
