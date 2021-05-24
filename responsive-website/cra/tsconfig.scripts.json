@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs", // https://www.tsmean.com/articles/learn-typescript/typescript-module-compiler-option/
+    "strict": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "strictPropertyInitialization": false,
+    "isolatedModules": false,
+  }
+}
