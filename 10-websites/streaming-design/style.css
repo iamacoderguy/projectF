@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: black;
+  color: white;
+  margin: 0;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+button {
+  padding: 1rem 2rem;
+  background-color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 5px solid white;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+nav .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+}
+
+main img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+main .col {
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+main .video {
+  position: relative;
+}
+
+main .video i {
+  font-size: 2rem;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+}
+
+p.green {
+  color: #00D69F;
+}
+
+p.red {
+  color: #E75046;
+}
+
+p.orange {
+  color: #D27752;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    justify-content: center;
+  }
+
+  nav button {
+    display: none;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  main .col {
+    margin-bottom: 4rem;
+  }
+
+  main .video i {
+    top: 45%;
+  }
+}
